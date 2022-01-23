@@ -6,17 +6,16 @@ while True:
     if ans in 'NnНн' and ans != '':
         break
     name = input('Введите название товара: ')
-    price = input('Введите цену товара: ')
-    quantity = input('Введите количество товара: ')
+    price = int(input('Введите цену товара: '))
+    quantity = int(input('Введите количество товара: '))
     measurement = input('Введите единицы измерения: ')
-    row = {'name': name, 'price': price, 'quant': quantity, 'measure': measurement}
+    row = {'Название': name, 'Цена': price, 'Количество': quantity, 'ед': measurement}
     products.append((i, row))
     i += 1
 
 analit = dict()
-for el in products[0]:
-    analit[el] = []
+for row in products:
+    for a, d in row[1].items():
+        analit.setdefault(a, []).append(d)
 
 print(analit)
-
-# Собираем аналитику
