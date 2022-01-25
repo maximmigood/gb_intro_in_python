@@ -1,7 +1,10 @@
 a = float(input('Введите число: '))
 b = int(input('Введите отрицательное целое число: '))
 
-my_func = lambda x, y: x ** y
+
+def my_func(x, y):
+    return x ** y
+
 
 def my_func_(x, y):
     """
@@ -10,6 +13,12 @@ def my_func_(x, y):
     :param y:
     :return:
     """
-    return x ** y
+    res = 1
+    for _ in range(-y):
+        res *= x
+    return 1 / res
 
-print(my_func(a, b))
+
+print(f'Функция my_func({a}, {b}) возвращает {my_func(a, b)})
+print()
+print(f'Функция my_func({a}, {b}) возвращает {my_func_(a, b)})
