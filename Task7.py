@@ -1,5 +1,4 @@
 import math
-def trans(n):
 
 first_day = float(input('Расстояние, которое пробежали за первый день: '))
 result = float(input('Расстояние которое хотите пробегать: '))
