@@ -13,7 +13,7 @@ class TrafficLight:
     def running(self):
         print(f'{self.__color} горит {self.__colors[self.__color][0]} сек.')
         self.__color = self.__colors[self.__color][1]
-
+        
 
 tl = TrafficLight('Зеленый')
 
