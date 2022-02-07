@@ -1,4 +1,5 @@
 res = {}
+
 with open('task6.txt', 'r', encoding='utf-8') as obj_file:
     for row in obj_file.readlines():
         r = row.split()

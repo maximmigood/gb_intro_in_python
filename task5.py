@@ -7,5 +7,3 @@ with open('task5.txt', 'r') as obj_file:
     z = obj_file.readline();
 z = z.split()
 s = sum(map(float, z))
-
-#print(s, s / len(z), len(z))
