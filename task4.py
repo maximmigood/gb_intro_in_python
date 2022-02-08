@@ -51,7 +51,7 @@ cars = [WorkCar(60, 'Оранжевый', 'Камаз'),
 
 
 for i, car in enumerate(cars):
-    print(f'----- {car.color} {car.name} {car.show_speed()} -----')
+    print(f'----- {car.color} {car.name} -----')
     car.go(30)
     car.show_speed()
     car.go(50)
@@ -59,7 +59,7 @@ for i, car in enumerate(cars):
     car.turn(80)
     car.go(90)
     car.show_speed()
-    car.go(50)
+    car.go(40)
     car.show_speed()
     car.go(10)
     car.show_speed()
