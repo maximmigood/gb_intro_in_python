@@ -12,6 +12,9 @@ class Clothes(ABC):
     def name(self):
         return self._name_
 
+    def sum_consumption(self, list_clothes):
+        pass
+
 class Coat(Clothes):
     def __init__(self, name, vol):
         super().__init__(name)
@@ -30,6 +33,11 @@ class Suit(Clothes):
     @property
     def consumption(self):
         return round(self.h * 2 + 0.3, 3)
+
+
+
+
+
 
 cl = Coat('Шикардос', 10)
 print(f'Расход ткани для {cl.name} - {cl.consumption} v2')
