@@ -5,6 +5,7 @@ class DivisionByZerro(Exception):
         else:
             self.txt = 'Деление на 0 запрещено.'
 
+
 def div(a, b):
     if b == 0:
         raise DivisionByZerro()
@@ -17,7 +18,7 @@ while True:
     if s:
         try:
             a, b = map(int, s.split())
-        except ValueError as err:
+        except ValueError:
             print('Необходимо ввести только 2 числа разделённых пробелом. Повторите ввод.')
             continue
     else:
@@ -26,4 +27,3 @@ while True:
         print(f'{div(a, b):.3f}')
     except DivisionByZerro as err:
         print(f'{err.txt} Повторите ввод')
-
